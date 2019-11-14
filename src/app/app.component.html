@@ -3,6 +3,8 @@
   Start editing to see some magic happen :)
 </p>
 
-<ul *ngFor="let cocktail of cocktailList">
-  <li> {{cocktail.name}} </li>
+<ul>
+  <li *ngFor="let cocktail of cocktailList"> {{cocktail.name}} <br><img [src]="cocktail.imgThumb" style="max-height: 50px"> </li>
+ 
+
 </ul>
