@@ -15,9 +15,7 @@ export class CocktailService {
       map(
         (data: any) => 
           data.drinks.map(
-          (item: any) => new Drink(
-            item.strDrink
-          )
+          Drink.adapt
         )
       )
     );

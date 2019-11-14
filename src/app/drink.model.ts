@@ -1,4 +1,4 @@
-export class Drink implements Deserializable{
+export class Drink{
 name: String;
 constructor (
   name: String
@@ -6,19 +6,13 @@ constructor (
 this.name = name;
 }
 
-  deserialize(input: any) {
-    Object.assign(this, input);
-    return this;
-  }
-
-static adapt(item: any){}
+static adapt(item: any){
+  return new Drink (
+    item.strDrink
+  );
+}
 
 getfullName(){
   return this.name;
 }
 }
-
-export interface Deserializable {
-  deserialize(input: any): this;
-}
-
